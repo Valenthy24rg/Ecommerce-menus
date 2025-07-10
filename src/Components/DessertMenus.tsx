@@ -33,7 +33,7 @@ export const DessertMenus = () => {
   };
   return (
     <div className="flex-1 pr-8">
-      <h1 className="text-3xl font-redHat mb-8">Desserts</h1>
+      <h1 className="text-3xl font-red-hat mb-8">Desserts</h1>
       <div className="flex flex-wrap -mx-4">
         {data.map((dessert) => (
           <div key={dessert.id} className="w-1/3 px-4 mb-8">
