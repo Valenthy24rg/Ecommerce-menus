@@ -1,0 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* Las directivas base de Tailwind CSS son esenciales */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Puedes añadir tu CSS personalizado aquí debajo de las directivas de Tailwind */
+body {
+  /* Si quieres que Red Hat Text sea la fuente por defecto para todo el body */
+  font-family: 'Red Hat Text', sans-serif;
+}
