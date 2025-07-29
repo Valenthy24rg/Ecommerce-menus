@@ -75,9 +75,9 @@ export const DessertCart = () => {
               </span>
             </div>
             <div>
-              <div className="flex items-center text-sm gap-2 mt-10 bg-[#f4edeb] rounded-full p-2">
+              <div className="flex items-center text-[12px] gap-2 mt-10 bg-[#f4edeb] rounded-full p-2">
                 <img src={Carbon} alt="carbon" />
-                <p>This is a <span className="font-bold">carbon-neutral</span> delivery</p>
+                <p>Esta es una entrega a <span className="font-bold">carbon natural</span></p>
               </div>
             </div>
             <div>

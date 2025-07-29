@@ -31,8 +31,8 @@ const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
         </button>
         <div className="flex flex-col items-center">
           <img src={ConfirmedIcon} alt="Order Confirmed" className="w-10 mb-2" />
-          <h2 className="text-2xl font-bold text-[#260f08] mb-1">Order Confirmed</h2>
-          <p className="text-gray-500 mb-4 text-center">We hope you enjoy your food!</p>
+          <h2 className="text-2xl font-bold text-[#260f08] mb-1">Orden Confirmada</h2>
+          <p className="text-gray-500 mb-4 text-center">¡Esperamos que disfrutes tu comida!</p>
         </div>
         <div className="bg-[#f9f6f5] rounded-lg p-4 mb-6">
           <ul>
@@ -65,7 +65,7 @@ const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
           className="w-full bg-[#c73a0f] hover:bg-[#a32a0a] text-white font-semibold py-3 rounded-full text-lg transition"
           onClick={onStartNewOrder}
         >
-          Start New Order
+          Iniciar Nueva Orden
         </button>
       </div>
     </div>

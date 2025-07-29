@@ -3,6 +3,7 @@ import AddToCart from '../../public/icon-add-to-cart.svg'
 import { useCartStore } from "../store/cartStore";
 import Increment from '../../public/icon-increment-quantity.svg'
 import Decrement from '../../public/icon-decrement-quantity.svg'
+import { Link } from "react-router-dom";
 
 
 export const DessertMenus = () => {
@@ -14,14 +15,18 @@ export const DessertMenus = () => {
         {data.map((dessert) => (
           <div key={dessert.id} className="w-1/3 px-4 mb-8">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Link to={`/dessert/${dessert.id}`}>
               <img
                 src={dessert.image.desktop}
                 alt={dessert.name}
                 className="w-full h-48 object-cover"
               />
+               </Link>
               <div className="p-4">
                 <h2 className="text-md font-medium text-[#87635a] mb-2">{dessert.category}</h2>
-                <p className="text-[#260f08] text-lg font-semibold mb-4">{dessert.name}</p>
+                <Link to={`/dessert/${dessert.id}`} className="text-[#c73a0f] hover:underline">
+                  <p className="text-[#260f08] text-lg font-semibold mb-4">{dessert.name}</p>
+                </Link>
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold">${dessert.price}</span>
                   <div className="flex items-center space-x-2"></div>
