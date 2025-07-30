@@ -3,14 +3,35 @@ import AddToCart from '../../public/icon-add-to-cart.svg'
 import { useCartStore } from "../store/cartStore";
 import Increment from '../../public/icon-increment-quantity.svg'
 import Decrement from '../../public/icon-decrement-quantity.svg'
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 
 export const DessertMenus = () => {
   const { cart, addToCart, increment, decrement } = useCartStore();
+  const navigate = useNavigate();
+  
+  const userName = localStorage.getItem('userName') || 'Usuario';
+
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userName');
+    navigate('/login');
+  };
+
   return (
     <div className="flex-1 pr-8">
-      <h1 className="text-3xl font-red-hat font-semibold text-[#260f08] mb-8">Desserts</h1>
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-red-hat font-semibold text-[#260f08]">Desserts</h1>
+          <p className="text-sm text-gray-600">Bienvenido, {userName}</p>
+        </div>
+        <button
+          onClick={handleLogout}
+          className="bg-[#c73a0f] text-white px-4 py-2 rounded-md hover:bg-[#a62d0c] transition-colors"
+        >
+          Cerrar Sesión
+        </button>
+      </div>
       <div className="flex flex-wrap -mx-4">
         {data.map((dessert) => (
           <div key={dessert.id} className="w-1/3 px-4 mb-8">
